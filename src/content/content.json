@@ -1,0 +1,44 @@
+[
+    {
+        "title": "HyperLathe",
+        "page": [
+            {
+                "id": 1,
+                "title": "Richard Young",
+                "headline": "UX/UI designer / front-end designer & developer",
+                "bodycopy": [
+                    "Hello! Welcome to my online portfolio, where you can see some examples of my design and development work.",
+                    "I have been creating web-related content since 2004, including wireframing, UX, prototyping, design, development, and testing.",
+                    "I am a huge fan of responsive design, accessibility, and clean, semantic markup, and have enjoyed working in a number of industries including e-commerce, finance, communications, and insurance.",
+                    "Prior to my current career path, I worked as a composer and copywriter; both of which I found to be useful methodologies in regard to what I'm doing today.",
+                    "Feel free to contact me or call on +44 (0)7967 639 192 if you would like to discuss working together."
+                ]
+            },
+            {
+                "id": 2,
+                "title": "About",
+                "headline": "Key Skills:",
+                "subhead": "Technologies / Tools:",
+                "subhead2": "Client List:"
+            },
+            {
+                "id": 3,
+                "title": "Design",
+                "headline": "",
+                "subhead": "Key Skills"
+            },
+            {
+                "id": 4,
+                "title": "Development",
+                "headline": "About",
+                "subhead": "Key Skills"
+            },
+            {
+                "id": 5,
+                "title": "Contact",
+                "headline": "Get in touch...",
+                "subhead": "Key Skills"
+            }
+        ]
+    }
+]
