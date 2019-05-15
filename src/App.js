@@ -26,8 +26,11 @@
 // export default App;
 
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import { Route, NavLink, BrowserRouter } from "react-router-dom";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import Home from "./Home";
 import About from "./About";
 import Design from "./Design";
@@ -39,6 +42,16 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand exact href="/">HyperLathe</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/design">Design</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
           <h1><NavLink exact to="/">HyperLathe</NavLink></h1>
           <nav>
             <li><NavLink exact to="/">Home</NavLink></li>
