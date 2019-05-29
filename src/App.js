@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; // I feel this this could be avoided
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'; // I feel this this could be avoided
 import { Route, NavLink, BrowserRouter } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar'; // Might be worth creating your own to reduce file size as it is a simple component
 import Nav from 'react-bootstrap/Nav'; // Might be worth creating your own to reduce file size as it is a simple component
