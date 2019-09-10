@@ -1,7 +1,12 @@
 @import-normalize;
 
 .App {
-  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+    .Nav {
+      background: #f3f3f3;
+    }
 }
 
 .App-logo {
@@ -23,6 +28,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Header {
+  
 }
 
 @keyframes App-logo-spin {

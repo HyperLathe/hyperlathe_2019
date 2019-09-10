@@ -6,7 +6,7 @@
                 "id": 1,
                 "title": "Richard Young",
                 "headline": "UX/UI designer / front-end designer & developer",
-                "bodycopy": [
+                "body": [
                     "Hello! Welcome to my online portfolio, where you can see some examples of my design and development work.",
                     "I have been creating web-related content since 2004, including wireframing, UX, prototyping, design, development, and testing.",
                     "I am a huge fan of responsive design, accessibility, and clean, semantic markup, and have enjoyed working in a number of industries including e-commerce, finance, communications, and insurance.",
@@ -18,8 +18,20 @@
                 "id": 2,
                 "title": "About",
                 "headline": "Key Skills:",
+                "body_01_categories": {
+                    "Design": "Clean and elegant layouts, logo creation, interface design and image editing. Full access to Adobe CC.",
+                    "Development": "Optimised, responsive, accessible and standards compliant HTML, CSS and JavaScript.",
+                    "UX / UI": "User Experience / User Interface design, research and testing, from user-flow mapping, wireframing and prototyping.",
+                    "HTML Emails": "For email marketing requirements; mobile-friendly HTML email design and build, sending and reporting.",
+                    "WordPress": "From scratch-built Wordpress sites and personal blogs, to custom templating and design.",
+                    "Content Creation": "Effective copywriting and proofreading, taglines, marketing, branding and image sourcing." 
+                },
                 "subhead": "Technologies / Tools:",
-                "subhead2": "Client List:"
+                "subhead2": "Client List:",
+                "body": [
+                    "arse",
+                    "biscuits"
+                ]
             },
             {
                 "id": 3,
