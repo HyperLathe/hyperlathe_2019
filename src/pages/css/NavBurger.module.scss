@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+
+.button {
+position: absolute;
+top: 12px;
+z-index: 1;
+right: 0;
+padding: 0;
+margin-right: 15px;
+background: transparent;
+border: 0;
+outline: none;
+  span {
+    width: 27px;
+    height: 3px;
+    display: block;
+    background: $brand-white;
+    margin: 5px 0px;
+    transition: all 0.1s linear;
+  }
+}
+
+.button.active {
+  span {
+    background: $brand-black;
+  }
+  span:first-child {
+    transform: rotate(45deg);
+    margin: 15px 0px;
+  }
+  span:nth-child(2) {
+    display: none;
+  }
+  span:last-child {
+    transform: rotate(-45deg);
+    margin: -17px 0px;
+  }
+}
+
+
+
+
+
+

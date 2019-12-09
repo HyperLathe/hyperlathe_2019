@@ -1,52 +1,67 @@
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-import './App.scss';
-import React from "react";
+import React, { useState } from "react";
 import { Route, NavLink, BrowserRouter } from "react-router-dom";
+import styled from "styled-components";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Design from "./pages/Design";
 import Development from "./pages/Development";
 import Contact from "./pages/Contact";
+import NavBurger from "./pages/components/NavBurger";
+import CoreStyles from "./coreStyles.js";
+
+const Main = styled.div `
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  margin-left: 0;
+  transition: all 0.2s linear;
+`;
+
+const Nav = styled.nav `
+    background: #f3f3f3;
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    margin: 0px;
+    background: ${CoreStyles.brandWhite};
+    padding: 20px;
+    width: 150px;
+    margin-right: -190px;
+    transition: all 0.2s linear;
+    display: flex;
+    flex-direction: column;
+`;
+
+const Logo = styled.h1 `
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: ${CoreStyles.brandPrimary};
+    text-align: center;
+    padding: 5px 0px 15px 0px;
+    margin: 0;
+      a {
+        color: ${CoreStyles.brandWhite};
+      }
+`;
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
     <BrowserRouter>
-      <div className="App">
+      <Main className={isOpen ? 'navOpen' : ''}>
         <header className="Nav">
-          <h1><NavLink exact to="/">HyperLathe</NavLink></h1>
-          <nav>
-            <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/design">Design</NavLink></li>
-            <li><NavLink to="/development">Development</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-          </nav>
+          <NavBurger isOpen={isOpen} toggle={toggle} />
+          <Logo><NavLink exact to="/">Test</NavLink></Logo>
+          <Nav>
+            <NavLink exact to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/design">Design</NavLink>
+            <NavLink to="/development">Development</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+          </Nav>
         </header>
         <div className="content">
           <Route exact path="/" component={Home} />
@@ -55,7 +70,7 @@ function App() {
           <Route path="/Development" component={Development} />
           <Route path="/Contact" component={Contact} />
         </div>
-      </div>
+      </Main>
     </BrowserRouter>
   );
 }

@@ -1,12 +1,24 @@
 @import-normalize;
+@import './pages/css/variables.scss';
 
 .App {
   max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
+  margin-left: 0;
+  transition: all 0.2s linear;
     .Nav {
       background: #f3f3f3;
     }
+}
+
+.menu_open {
+  .App {
+    margin-left: -190px;
+  }
+  nav {
+    margin-right: 0;
+  }
 }
 
 .App-logo {
@@ -30,8 +42,34 @@
   color: #61dafb;
 }
 
-.Header {
-  
+.Nav h1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: $brand-primary;
+  text-align: center;
+  padding: 5px 0px 15px 0px;
+  margin: 0;
+    a {
+      color: $brand-white;
+    }
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  margin: 0px;
+  background: $brand-white;
+  padding: 20px;
+  width: 150px;
+  margin-right: -190px;
+  transition: all 0.2s linear;
+}
+
+
+
+.content {
+  max-width: 100%;
 }
 
 @keyframes App-logo-spin {
