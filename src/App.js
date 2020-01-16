@@ -54,7 +54,7 @@ function App() {
       <Main className={isOpen ? 'navOpen' : ''}>
         <header className="Nav">
           <NavBurger isOpen={isOpen} toggle={toggle} />
-          <Logo><NavLink exact to="/">Test</NavLink></Logo>
+          <Logo><NavLink exact to="/">Hyperlathe</NavLink></Logo>
           <Nav>
             <NavLink exact to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
