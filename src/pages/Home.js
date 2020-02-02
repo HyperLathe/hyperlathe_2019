@@ -1,9 +1,8 @@
-
 import React from "react";
 import Content from "../content/content.json";
 import ProfilePic from "../img/richardyoung.jpg"
 
-const pageData = (Content[0].page[0]);
+const pageData = Content[0].page[0];
 
 function Home() {
   return (
@@ -21,7 +20,7 @@ function Home() {
           <p>{pageData.body[4]}</p>
         </div>
         <div>
-          <img src={ProfilePic} className="img-fluid" alt="Richard" />
+          <img src={ProfilePic} alt="Richard Young" />
         </div>
       </div>
     </div>

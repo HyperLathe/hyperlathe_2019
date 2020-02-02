@@ -13,6 +13,7 @@ function About() {
       {Object.entries(pageData.body_01_categories).map(([title, value]) => {
         return (<CategoryBlock key={title} title={title} value={value} />)
       })}
+      
     </div>
   );
 }
