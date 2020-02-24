@@ -50,6 +50,12 @@
                 "title": "Contact",
                 "headline": "Get in touch...",
                 "subhead": "Key Skills"
+            },
+            {
+                "id": 6,
+                "title": "UX",
+                "headline": "UX experience",
+                "subhead": "Examples"
             }
         ]
     }

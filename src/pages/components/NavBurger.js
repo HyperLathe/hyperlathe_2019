@@ -41,9 +41,9 @@ const NavButton = styled.button `
     }
 `;
 
-function NavBurger({ isOpen, toggle }) {
+function NavBurger(props) {
   return (
-    <NavButton className={isOpen ? 'active' : ''} onClick={toggle}>
+    <NavButton className={props.isOpen ? 'active' : ''} onClick={props.toggle}>
       <span></span>
       <span></span>
       <span></span>
