@@ -9,7 +9,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NavBurger from "./pages/components/NavBurger";
 import CoreStyles from "./coreStyles.js";
-import LogoGraphic from "./img/logo.png"
+import LogoGraphic from "./img/logo.png";
+
+import TestLayoutDiv from "./pages/components/TestLayoutDiv";
 
 
 // --- styles ---
@@ -19,11 +21,9 @@ const Main = styled.div `
   width: 100%;
   display: flex;
   margin-left: 0;
-  transition: all 0.4s ease;
+  transition: margin 0.4s ease;
   position: relative;
-    &.nav-open {
-      margin-left: -200px;
-    }
+  overflow: hidden;
 `;
 
 const Header = styled.header `
@@ -34,6 +34,10 @@ const Header = styled.header `
   text-align: center;
   padding: 5px 0px 8px 0px;
   margin: 0;
+    transition: all 0.4s ease;
+    &.nav-open {
+      margin-left: -200px;
+    }
 `;
 
 const Nav = styled.nav `
@@ -44,12 +48,15 @@ const Nav = styled.nav `
     right: 0;
     margin: 0px;
     background: ${CoreStyles.brandWhite};
-    padding: 20px;
     width: 150px;
+    padding: 20px;
+    height: 100%;
     margin-right: -190px;
-    transition: all 0.2s linear;
-    display: flex;
     flex-direction: column;
+    display: flex;
+      &.nav-open {
+        transition: width 0.4s ease;
+      }
 `;
 
 const Logo = styled.h1 `
@@ -70,8 +77,12 @@ const Content = styled.div `
     margin-top: 60px;
     width: 100%;
     padding: 10px 15px;
+    transition: margin 0.4s ease;
+    &.nav-open {
+      margin-left: -200px;
+      margin-right: 200px;
+    }
 `;
-
 
 
 // --- app ---
@@ -87,11 +98,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Main className={isOpen ? 'nav-open' : ''}>
-        <Header onClick={closeNav}>
+      <Main>
+        <Header onClick={closeNav} className={isOpen ? 'nav-open' : ''}>
           <NavBurger isOpen={isOpen} toggle={toggle} />
           <Logo><NavLink exact to="/">Hyperlathe</NavLink></Logo>
-          <Nav onClick={toggle} >
+          <Nav onClick={toggle} className={isOpen ? 'nav-open' : ''}>
             <NavLink exact to="/">Home</NavLink>
             <NavLink to="/development">Development</NavLink>
             <NavLink to="/design">Design</NavLink>
@@ -100,13 +111,16 @@ function App() {
             <NavLink to="/contact">Contact</NavLink>
           </Nav>
         </Header>
-        <Content onClick={closeNav}>
+        <Content onClick={closeNav} className={isOpen ? 'nav-open' : ''}>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/Development" component={Development} />
           <Route path="/Design" component={Design} />
           <Route path="/Ux" component={Ux} />
           <Route path="/Contact" component={Contact} />
+        <TestLayoutDiv>
+          <p>Test Content</p>
+        </TestLayoutDiv>
         </Content>
       </Main>
     </BrowserRouter>
